@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: demo banner, nav with language switch, hero (headline left, BTC / ETH / USDT cards right), 50-coin live table where every row opens Telegram, plans, steps, Telegram call to action. One committed dark look. */
+/* Layout:nav with language switch, hero (headline left, BTC / ETH / USDT cards right), 50-coin live table where every row opens Telegram, plans, steps, Telegram call to action. One committed dark look. */
 :root {
   --bg: #050A1C;
   --bg-2: #0A1438;
@@ -46,11 +46,8 @@ p { margin: 0; }
 a { color: var(--cyan); }
 :focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; border-radius: 6px; }
 .eyebrow { font: 500 12px var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-
-.demo { background: var(--warn-bg); color: var(--warn-ink); font-size: 13px; text-align: center; padding: 8px 16px; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
-.demo b { font-weight: 600; }
-
-.top { display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; padding-block: 18px; flex-wrap: wrap; }
+  
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; padding-block: 18px; flex-wrap: wrap; }
 .brand { font-weight: 800; font-size: 21px; display: flex; align-items: center; gap: 10px; letter-spacing: -0.03em; }
 .brand svg { width: 28px; height: 28px; flex: none; }
 .nav { display: flex; gap: 14px 20px; flex-wrap: wrap; align-items: center; font-size: 14px; }
@@ -75,8 +72,7 @@ a { color: var(--cyan); }
 .pill { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid #29D3F066; border-radius: 99px; background: #29D3F014; color: var(--cyan); font-weight: 600; font-size: 14px; }
 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--cyan); flex: none; }
 .pill.live .dot { animation: pulse 1.6s ease-in-out infinite; }
-.pill.demo-mode { border-color: #F6B84A66; background: #F6B84A14; color: var(--warn-ink); }
-.pill.demo-mode .dot { background: var(--warn-ink); }
+
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 .hero h1 { font-size: clamp(36px, 6vw, 64px); margin-top: 22px; }
 .hero h1 em { font-style: normal; color: var(--cyan); }
@@ -162,8 +158,6 @@ tbody tr:hover .act { background: var(--cyan); color: var(--cyan-ink); }
 .linkline code { background: #00000040; padding: 6px 10px; border-radius: 6px; overflow-wrap: anywhere; color: var(--ink); }
 .linkline button { font: 600 12px var(--font-body); padding: 6px 12px; border-radius: 6px; border: 1px solid #ffffff44; background: transparent; color: var(--ink); cursor: pointer; }
 
-.risk { background: var(--warn-bg); color: var(--warn-ink); border-radius: 12px; padding: 18px 20px; font-size: 14px; }
-.risk b { font-weight: 600; }
 footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
 @media (max-width: 880px) {
@@ -332,7 +326,6 @@ var API = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=
 /* ---- Translations ---- */
 var T = {
 en: {
-  demo: "<b>Demo project.</b> Ledgerline Capital is a fictional company made for a course assignment. It holds no money and offers no real service.",
   nav_markets: "Markets", nav_plans: "Plans", nav_how: "How it works", nav_open: "Open account",
   pill_conn: "Connecting • 50+ Assets", pill_live: "Live Markets • 50+ Assets", pill_demo: "Demo Prices • 50+ Assets",
   h1: "We Trade &amp; Invest in <em>Bitcoin, ETH, USDT</em> &amp; More",
@@ -362,11 +355,9 @@ en: {
   cta_h2: "Start the conversation on Telegram",
   cta_p: "Open the bot, tell it your goal, and pick a plan. It will never ask for your recovery phrase or password.",
   copy_link: "Copy link", copied: "Copied", press_copy: "Press copy", open_bot: "Open the bot",
-  risk: "<b>Risk warning.</b> Trading and investing in crypto assets is high risk and you can lose all of your money. Prices shown are market data or, when the market feed is unavailable, simulated demo prices. This demo site is not financial advice and is not an offer to sell or buy anything.",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Built as a course assignment"
 },
 es: {
-  demo: "<b>Proyecto de demostración.</b> Ledgerline Capital es una empresa ficticia creada para una tarea de curso. No guarda dinero ni ofrece ningún servicio real.",
   nav_markets: "Mercados", nav_plans: "Planes", nav_how: "Cómo funciona", nav_open: "Abrir cuenta",
   pill_conn: "Conectando • más de 50 activos", pill_live: "Mercados en vivo • más de 50 activos", pill_demo: "Precios de demostración • más de 50 activos",
   h1: "Operamos e invertimos en <em>Bitcoin, ETH, USDT</em> y más",
@@ -396,11 +387,9 @@ es: {
   cta_h2: "Inicia la conversación en Telegram",
   cta_p: "Abre el bot, cuéntale tu objetivo y elige un plan. Nunca te pedirá tu frase de recuperación ni tu contraseña.",
   copy_link: "Copiar enlace", copied: "Copiado", press_copy: "Pulsa copiar", open_bot: "Abrir el bot",
-  risk: "<b>Advertencia de riesgo.</b> Operar e invertir en criptoactivos es de alto riesgo y puedes perder todo tu dinero. Los precios mostrados son datos de mercado o, si el feed no está disponible, precios de demostración simulados. Este sitio de demostración no es asesoramiento financiero ni una oferta de compra o venta.",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Creado como tarea de curso"
 },
 zh: {
-  demo: "<b>演示项目。</b>Ledgerline Capital 是为课程作业虚构的公司，不持有任何资金，也不提供真实服务。",
   nav_markets: "行情", nav_plans: "方案", nav_how: "运作方式", nav_open: "开设账户",
   pill_conn: "连接中 • 50+ 种资产", pill_live: "实时行情 • 50+ 种资产", pill_demo: "演示价格 • 50+ 种资产",
   h1: "交易并投资 <em>比特币、ETH、USDT</em> 等更多资产",
@@ -429,8 +418,7 @@ zh: {
   how3h: "跟踪您的投资组合", how3p: "对账单会通过 Telegram 发送，包含您的余额和每一笔交易。",
   cta_h2: "在 Telegram 上开始对话",
   cta_p: "打开机器人，告诉它您的目标并选择方案。它绝不会索要您的助记词或密码。",
-  copy_link: "复制链接", copied: "已复制", press_copy: "请按复制", open_bot: "打开机器人",
-  risk: "<b>风险提示。</b>交易和投资加密资产风险很高，您可能损失全部资金。所示价格为市场数据；若行情源不可用，则为模拟的演示价格。本演示网站不构成财务建议，也不是任何买卖要约。",
+  copy_link: "复制链接", copied: "已复制", press_copy: "请按复制", open_bot: "打开机器人", 
   foot_l: "Ledgerline Capital（演示）", foot_r: "课程作业作品"
 }
 };
