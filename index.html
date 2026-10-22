@@ -243,59 +243,47 @@ footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex;
       </div>
     </div>
 
-    <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="container trust-items">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Bank-Grade Security
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Cold Storage
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        24/7 Markets
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        Instant Deposits
-      </div>
+    <div class="trust" aria-label="Highlights">
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 2.9 8.3 7 10 4.1-1.7 7-5.6 7-10V6l-7-3z"/></svg><span data-i18n="trust1"></span></span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-i18n="trust2"></span></span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="trust3"></span></span>
+      <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-4.2-7.3"/><path d="m8.5 11.5 3 3 8-8.5"/></svg><span data-i18n="trust4"></span></span>
     </div>
-  </div>
 
-  <!-- SUPPORTED ASSETS -->
-  <section id="assets">
-    <div class="container">
-      <div class="section-header">
-        <h2>Trade & Invest in Top Cryptocurrencies</h2>
-        <p>We support Bitcoin, Ethereum, USDT and a growing list of high-liquidity digital assets for investment and trading.</p>
+    <section id="top-coins">
+      <div class="sec-head center">
+        <h2 data-i18n="tc_h2"></h2>
+        <p data-i18n="tc_p"></p>
       </div>
-      <div class="assets-grid">
-        <div class="asset-card">
-          <div class="asset-icon btc">₿</div>
-          <h3>Bitcoin (BTC)</h3>
-          <p>The original cryptocurrency. Store of value & long-term investment focus.</p>
+      <div class="tgrid">
+        <div class="tcard">
+          <a class="stretch" data-coin="BTC" target="_blank" rel="noopener"></a>
+          <div class="tbadge" style="background:#F7931A">B</div>
+          <h3 data-i18n="tc_btc_n"></h3>
+          <p data-i18n="tc_btc_d"></p>
         </div>
-        <div class="asset-card">
-          <div class="asset-icon eth">Ξ</div>
-          <h3>Ethereum (ETH)</h3>
-          <p>Smart contract platform powering DeFi, NFTs and decentralized apps.</p>
+        <div class="tcard">
+          <a class="stretch" data-coin="ETH" target="_blank" rel="noopener"></a>
+          <div class="tbadge" style="background:#4F74F5">Ξ</div>
+          <h3 data-i18n="tc_eth_n"></h3>
+          <p data-i18n="tc_eth_d"></p>
         </div>
-        <div class="asset-card">
-          <div class="asset-icon usdt">₮</div>
-          <h3>Tether (USDT)</h3>
-          <p>Stablecoin pegged to USD. Ideal for parking capital and low-volatility strategies.</p>
+        <div class="tcard">
+          <a class="stretch" data-coin="USDT" target="_blank" rel="noopener"></a>
+          <div class="tbadge" style="background:#1FC2A0">₮</div>
+          <h3 data-i18n="tc_usdt_n"></h3>
+          <p data-i18n="tc_usdt_d"></p>
         </div>
-        <div class="asset-card">
-          <div class="asset-icon sol">S</div>
-          <h3>Solana & More</h3>
-          <p>SOL, BNB, XRP, ADA, DOGE and 40+ additional pairs available for trading.</p>
+        <div class="tcard">
+          <a class="stretch" data-coin="SOL" target="_blank" rel="noopener"></a>
+          <div class="tbadge" style="background:linear-gradient(135deg,#C04CF0,#7A3CF0)">S</div>
+          <h3 data-i18n="tc_sol_n"></h3>
+          <p data-i18n="tc_sol_d"></p>
         </div>
       </div>
-    </div>
+    </section>
   </section>
+   
     <section id="markets">
       <div class="sec-head">
         <div class="eyebrow" data-i18n="m_eyebrow"></div>
