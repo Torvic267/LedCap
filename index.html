@@ -81,100 +81,6 @@ a { color: var(--cyan); }
 .stats b { display: block; font-size: 32px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .stats span { font-size: 14px; color: var(--muted); }
 
-  /* ========== TRUST BAR ========== */
-    .trust-bar {
-      padding: 28px 0;
-      border-top: 1px solid var(--cyan);
-      border-bottom: 1px solid var(--muted);
-      background: var(--cyan);
-    }
-
-    .trust-items {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      text-align: center;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .trust-item svg {
-      width: 22px;
-      height: 22px;
-      color: var(--cyan);
-    }
-
-    /* ========== SECTION COMMON ========== */
-    section {
-      padding: 90px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 56px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 14px;
-    }
-
-    .section-header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-             }
-/* ========== ASSETS ========== */
-    .assets-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .asset-card {
-      background: var(--cyan);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .asset-card:hover {
-      border-color: var(--cyan);
-      transform: translateY(-4px);
-    }
-
-    .asset-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      margin: 0 auto 16px;
-      display: grid;
-      place-items: center;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .asset-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-    }
-
-    .asset-card p {
-      font-size: 0.9rem;
-      color: var(--cyan-ink);
-    }
   /* Price cards */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; min-width: 0; }
 .coin-card { background: linear-gradient(150deg, var(--card-a), var(--card-b)); border: 1px solid var(--card-line); border-radius: 22px; padding: 22px; min-width: 0; position: relative; overflow: hidden; }
@@ -203,7 +109,19 @@ section { padding-block: 56px; border-top: 1px solid var(--line); }
 .sec-head h2 { font-size: clamp(28px, 4vw, 40px); margin-top: 10px; }
 .sec-head p { color: var(--muted); margin-top: 12px; }
 
-/* Markets table */
+/* Trust strip + top coins */
+.trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 44px; padding: 28px 16px; border-block: 1px solid var(--line); background: linear-gradient(180deg, #1B379926, #11205F14); border-radius: 4px; }
+.trust > span { display: inline-flex; align-items: center; gap: 12px; font-weight: 600; font-size: 17px; }
+.trust svg { width: 26px; height: 26px; flex: none; fill: none; stroke: var(--cyan); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sec-head.center { margin-inline: auto; text-align: center; }
+.tgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.tcard { position: relative; text-align: center; background: linear-gradient(160deg, #162A7A, #0E1B52); border: 1px solid var(--line); border-radius: 20px; padding: 30px 22px; min-width: 0; }
+.tcard:hover { border-color: var(--cyan); }
+.tbadge { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 18px; font-size: 28px; font-weight: 800; color: #fff; box-shadow: 0 0 28px #ffffff1a; }
+.tcard h3 { font-size: 20px; }
+.tcard p { margin-top: 10px; color: var(--muted); font-size: 15px; }
+
+  /* Markets table */
 .tools { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 14px; }
 .tools input { flex: 1 1 220px; max-width: 340px; min-width: 0; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--row); color: var(--ink); font: 500 15px var(--font-body); }
 .tools .meta { font: 12px var(--font-mono); color: var(--muted); }
@@ -537,6 +455,13 @@ en: {
   cta_p: "Open the bot, tell it your goal, and pick a plan. It will never ask for your recovery phrase or password.",
   copy_link: "Copy link", copied: "Copied", press_copy: "Press copy", open_bot: "Open the bot",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Built as a course assignment"
+  trust1: "Bank-Grade Security", trust2: "Cold Storage", trust3: "24/7 Markets", trust4: "Instant Deposits",
+  tc_h2: "Trade &amp; Invest in Top Cryptocurrencies",
+  tc_p: "We support Bitcoin, Ethereum, USDT and a growing list of high-liquidity digital assets for investment and trading.",
+  tc_btc_n: "Bitcoin (BTC)", tc_btc_d: "The original cryptocurrency. Store of value &amp; long-term investment focus.",
+  tc_eth_n: "Ethereum (ETH)", tc_eth_d: "Smart contract platform powering DeFi, NFTs and decentralized apps.",
+  tc_usdt_n: "Tether (USDT)", tc_usdt_d: "Stablecoin pegged to USD. Ideal for parking capital and low-volatility strategies.",
+  tc_sol_n: "Solana &amp; More", tc_sol_d: "SOL, BNB, XRP, ADA, DOGE and 40+ additional pairs available for trading."
 },
 es: {
   nav_markets: "Mercados", nav_plans: "Planes", nav_how: "Cómo funciona", nav_open: "Abrir cuenta",
@@ -569,6 +494,13 @@ es: {
   cta_p: "Abre el bot, cuéntale tu objetivo y elige un plan. Nunca te pedirá tu frase de recuperación ni tu contraseña.",
   copy_link: "Copiar enlace", copied: "Copiado", press_copy: "Pulsa copiar", open_bot: "Abrir el bot",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Creado como tarea de curso"
+  trust1: "Seguridad de nivel bancario", trust2: "Almacenamiento en frío", trust3: "Mercados 24/7", trust4: "Depósitos instantáneos",
+  tc_h2: "Opera e invierte en las principales criptomonedas",
+  tc_p: "Admitimos Bitcoin, Ethereum, USDT y una lista creciente de activos digitales de alta liquidez para inversión y trading.",
+  tc_btc_n: "Bitcoin (BTC)", tc_btc_d: "La criptomoneda original. Reserva de valor y enfoque de inversión a largo plazo.",
+  tc_eth_n: "Ethereum (ETH)", tc_eth_d: "Plataforma de contratos inteligentes que impulsa DeFi, NFT y aplicaciones descentralizadas.",
+  tc_usdt_n: "Tether (USDT)", tc_usdt_d: "Stablecoin vinculada al USD. Ideal para resguardar capital y estrategias de baja volatilidad.",
+  tc_sol_n: "Solana y más", tc_sol_d: "SOL, BNB, XRP, ADA, DOGE y más de 40 pares adicionales disponibles para operar."
 },
 zh: {
   nav_markets: "行情", nav_plans: "方案", nav_how: "运作方式", nav_open: "开设账户",
@@ -601,6 +533,13 @@ zh: {
   cta_p: "打开机器人，告诉它您的目标并选择方案。它绝不会索要您的助记词或密码。",
   copy_link: "复制链接", copied: "已复制", press_copy: "请按复制", open_bot: "打开机器人", 
   foot_l: "Ledgerline Capital（演示）", foot_r: "课程作业作品"
+  trust1: "银行级安全", trust2: "冷存储", trust3: "24/7 全天候市场", trust4: "即时充值",
+  tc_h2: "交易并投资主流加密货币",
+  tc_p: "我们支持比特币、以太坊、USDT，以及不断增加的高流动性数字资产，用于投资和交易。",
+  tc_btc_n: "比特币 (BTC)", tc_btc_d: "最初的加密货币，价值储存与长期投资的核心选择。",
+  tc_eth_n: "以太坊 (ETH)", tc_eth_d: "支持 DeFi、NFT 和去中心化应用的智能合约平台。",
+  tc_usdt_n: "泰达币 (USDT)", tc_usdt_d: "与美元挂钩的稳定币，适合存放资金和低波动策略。",
+  tc_sol_n: "Solana 等更多", tc_sol_d: "SOL、BNB、XRP、ADA、DOGE 以及 40 多个其他交易对可供交易。"
 }
 };
 var lang = "en";
