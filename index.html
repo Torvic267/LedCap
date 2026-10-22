@@ -188,6 +188,12 @@ footer.site-foot { display: block; border-top: 1px solid var(--line); padding-to
 .foot-col a:hover { color: var(--cyan); }
 .foot-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
 
+  /* Legal popup */
+.modal { position: fixed; inset: 0; z-index: 50; background: #000000b3; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.modal-box { background: var(--bg-2); border: 1px solid var(--card-line); border-radius: 18px; padding: 26px; max-width: 480px; width: 100%; }
+.modal-box h3 { font-size: 22px; }
+.modal-box p { color: var(--muted); margin: 12px 0 20px; }
+
 @media (max-width: 880px) {
   .foot-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .hero, .cta { grid-template-columns: minmax(0, 1fr); }
@@ -391,7 +397,7 @@ footer.site-foot { display: block; border-top: 1px solid var(--line); padding-to
     </section>
 
     <section>
-   <footer class="site-foot">
+    <footer class="site-foot">
       <div class="foot-grid">
         <div class="foot-brand">
           <div class="brand">
@@ -424,16 +430,9 @@ footer.site-foot { display: block; border-top: 1px solid var(--line); padding-to
       <div class="foot-bottom"><span data-i18n="foot_l"></span><span data-i18n="foot_r"></span></div>
     </footer>
   </main>
-</div>>
-   <section>
-      <div style="display:flex;justify-content: space-between; align-items:center;flex-wrap:wrap;gap: 12px;padding-top:24px;font-size:0.8rem;max-width:400px;line-height:1.5;">
-      <div class="footer-bottom">
-        <p>© 2026 LedgerCapital Investment. All rights reserved.</p>
-        <p class="disclaimer">Cryptocurrency investments involve significant risk of loss. Past performance is not indicative of future results. This website is a demonstration template and does not offer real financial services.</p>
-      </div>
-    </div>
-      
-<script>
+</div>
+
+  <script>
 /* ---- Settings ---- */
 /* Your bot's username (the part after t.me/, no @). */
 var BOT_USERNAME = "LedgerlineBot";
