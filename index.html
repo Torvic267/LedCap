@@ -134,7 +134,48 @@ a { color: var(--cyan); }
       color: var(--text-muted);
       font-size: 1.1rem;
              }
-/* Price cards */
+/* ========== ASSETS ========== */
+    .assets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .asset-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .asset-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .asset-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .asset-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .asset-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  /* Price cards */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; min-width: 0; }
 .coin-card { background: linear-gradient(150deg, var(--card-a), var(--card-b)); border: 1px solid var(--card-line); border-radius: 22px; padding: 22px; min-width: 0; position: relative; overflow: hidden; }
 .coin-card:hover { border-color: var(--cyan); }
