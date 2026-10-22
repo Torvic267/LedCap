@@ -178,8 +178,6 @@ tbody tr:hover .act { background: var(--cyan); color: var(--cyan-ink); }
 .linkline code { background: #00000040; padding: 6px 10px; border-radius: 6px; overflow-wrap: anywhere; color: var(--ink); }
 .linkline button { font: 600 12px var(--font-body); padding: 6px 12px; border-radius: 6px; border: 1px solid #ffffff44; background: transparent; color: var(--ink); cursor: pointer; }
 
-.risk { background: var(--warn-bg); color: var(--warn-ink); border-radius: 12px; padding: 18px 20px; font-size: 14px; }
-.risk b { font-weight: 600; }
 footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
 @media (max-width: 880px) {
@@ -385,7 +383,50 @@ footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex;
     </section>
 
     <section>
-      <div class="risk" data-i18n="risk"></div>
+        <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">₿</div>
+            LedgerCapital Investment
+          </a>
+          <p>We trade and invest in Bitcoin, Ethereum, USDT and a wide range of digital assets. Secure. Transparent. Built for investors.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#assets">Supported Assets</a></li>
+            <li><a href="#plans">Investment Plans</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="https://t.me/LedgerCapitalBot" target="_blank" rel="noopener">Start Investing (Telegram Bot)</a></li>
+            <li><a href="https://t.me/LedgerCapitalSupport" target="_blank" rel="noopener">Contact Support</a></li>
+            <li><a href="#plans">Investment Plans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Risk Disclosure</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LedgerCapital Investment. All rights reserved.</p>
+        <p class="disclaimer">Cryptocurrency investments involve significant risk of loss. Past performance is not indicative of future results. This website is a demonstration template and does not offer real financial services.</p>
+      </div>
+    </div>
+  </footer>
       <footer><span data-i18n="foot_l"></span><span data-i18n="foot_r"></span></footer>
     </section>
   </main>
@@ -432,8 +473,6 @@ en: {
   cta_h2: "Start the conversation on Telegram",
   cta_p: "Open the bot, tell it your goal, and pick a plan. It will never ask for your recovery phrase or password.",
   copy_link: "Copy link", copied: "Copied", press_copy: "Press copy", open_bot: "Open the bot",
-  risk: "<b>Risk warning.</b> Trading and investing in crypto assets is high risk and you can lose all of your money. Prices shown are market data or, when the market feed is unavailable, simulated demo prices. This demo site is not financial advice and is not an offer to sell or buy anything.",
-  foot_l: "Ledgerline Capital (demo)", foot_r: "Built as a course assignment",
   trust1: "Bank-Grade Security", trust2: "Cold Storage", trust3: "24/7 Markets", trust4: "Instant Deposits",
   tc_h2: "Trade &amp; Invest in Top Cryptocurrencies",
   tc_p: "We support Bitcoin, Ethereum, USDT and a growing list of high-liquidity digital assets for investment and trading.",
@@ -480,8 +519,6 @@ es: {
   cta_h2: "Inicia la conversación en Telegram",
   cta_p: "Abre el bot, cuéntale tu objetivo y elige un plan. Nunca te pedirá tu frase de recuperación ni tu contraseña.",
   copy_link: "Copiar enlace", copied: "Copiado", press_copy: "Pulsa copiar", open_bot: "Abrir el bot",
-  risk: "<b>Advertencia de riesgo.</b> Operar e invertir en criptoactivos es de alto riesgo y puedes perder todo tu dinero. Los precios mostrados son datos de mercado o, si el feed no está disponible, precios de demostración simulados. Este sitio de demostración no es asesoramiento financiero ni una oferta de compra o venta.",
-  foot_l: "Ledgerline Capital (demo)", foot_r: "Creado como tarea de curso",
   trust1: "Seguridad de nivel bancario", trust2: "Almacenamiento en frío", trust3: "Mercados 24/7", trust4: "Depósitos instantáneos",
   tc_h2: "Opera e invierte en las principales criptomonedas",
   tc_p: "Admitimos Bitcoin, Ethereum, USDT y una lista creciente de activos digitales de alta liquidez para inversión y trading.",
@@ -528,8 +565,6 @@ zh: {
   cta_h2: "在 Telegram 上开始对话",
   cta_p: "打开机器人，告诉它您的目标并选择方案。它绝不会索要您的助记词或密码。",
   copy_link: "复制链接", copied: "已复制", press_copy: "请按复制", open_bot: "打开机器人",
-  risk: "<b>风险提示。</b>交易和投资加密资产风险很高，您可能损失全部资金。所示价格为市场数据；若行情源不可用，则为模拟的演示价格。本演示网站不构成财务建议，也不是任何买卖要约。",
-  foot_l: "Ledgerline Capital（演示）", foot_r: "课程作业作品",
   trust1: "银行级安全", trust2: "冷存储", trust3: "24/7 全天候市场", trust4: "即时充值",
   tc_h2: "交易并投资主流加密货币",
   tc_p: "我们支持比特币、以太坊、USDT，以及不断增加的高流动性数字资产，用于投资和交易。",
