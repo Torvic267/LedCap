@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: demo banner, nav with language switch, hero (headline left, BTC / ETH / USDT cards right), 50-coin live table where every row opens Telegram, plans, steps, Telegram call to action. One committed dark look. */
+/* Layout: nav with language switch, hero (headline left, BTC / ETH / USDT cards right), 50-coin live table where every row opens Telegram, plans, steps, Telegram call to action. One committed dark look. */
 :root {
   --bg: #050A1C;
   --bg-2: #0A1438;
@@ -46,9 +46,6 @@ p { margin: 0; }
 a { color: var(--cyan); }
 :focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; border-radius: 6px; }
 .eyebrow { font: 500 12px var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-
-.demo { background: var(--warn-bg); color: var(--warn-ink); font-size: 13px; text-align: center; padding: 8px 16px; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
-.demo b { font-weight: 600; }
 
 .top { display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; padding-block: 18px; flex-wrap: wrap; }
 .brand { font-weight: 800; font-size: 21px; display: flex; align-items: center; gap: 10px; letter-spacing: -0.03em; }
@@ -196,9 +193,7 @@ footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex;
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 
-<div class="wrap">
-  <div class="demo" data-i18n="demo"></div>
-
+ 
   <header class="top">
     <div class="brand">
       <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="7" fill="var(--cyan)"/><path d="M9 7v14h10" fill="none" stroke="var(--cyan-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -408,7 +403,6 @@ var API = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=
 /* ---- Translations ---- */
 var T = {
 en: {
-  demo: "<b>Demo project.</b> Ledgerline Capital is a fictional company made for a course assignment. It holds no money and offers no real service.",
   nav_markets: "Markets", nav_plans: "Plans", nav_how: "How it works", nav_open: "Open account",
   pill_conn: "Connecting • 50+ Assets", pill_live: "Live Markets • 50+ Assets", pill_demo: "Demo Prices • 50+ Assets",
   h1: "We Trade &amp; Invest in <em>Bitcoin, ETH, USDT</em> &amp; More",
@@ -457,7 +451,6 @@ en: {
   w6_t: "Dedicated Support", w6_d: "Our team is available to help with account setup, deposits, withdrawals and strategy questions."
 },
 es: {
-  demo: "<b>Proyecto de demostración.</b> Ledgerline Capital es una empresa ficticia creada para una tarea de curso. No guarda dinero ni ofrece ningún servicio real.",
   nav_markets: "Mercados", nav_plans: "Planes", nav_how: "Cómo funciona", nav_open: "Abrir cuenta",
   pill_conn: "Conectando • más de 50 activos", pill_live: "Mercados en vivo • más de 50 activos", pill_demo: "Precios de demostración • más de 50 activos",
   h1: "Operamos e invertimos en <em>Bitcoin, ETH, USDT</em> y más",
@@ -506,7 +499,6 @@ es: {
   w6_t: "Soporte dedicado", w6_d: "Nuestro equipo está disponible para ayudarte con la configuración de la cuenta, depósitos, retiros y dudas de estrategia."
 },
 zh: {
-  demo: "<b>演示项目。</b>Ledgerline Capital 是为课程作业虚构的公司，不持有任何资金，也不提供真实服务。",
   nav_markets: "行情", nav_plans: "方案", nav_how: "运作方式", nav_open: "开设账户",
   pill_conn: "连接中 • 50+ 种资产", pill_live: "实时行情 • 50+ 种资产", pill_demo: "演示价格 • 50+ 种资产",
   h1: "交易并投资 <em>比特币、ETH、USDT</em> 等更多资产",
