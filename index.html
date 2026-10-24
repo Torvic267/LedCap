@@ -864,6 +864,8 @@ document.querySelectorAll("a[data-tg]").forEach(function (a) {
   a.href = start ? BOT_URL + "?start=" + start : plan ? BOT_URL + "?start=plan_" + plan : BOT_URL;
 });
 
+document.querySelectorAll("a[data-support]").forEach(function (a) { a.href = SUPPORT_URL; });
+
 /* Legal popups (demo text) */
 var modal = document.getElementById("legal-modal");
 function openLegal(k) {
