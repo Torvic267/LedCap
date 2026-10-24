@@ -50,9 +50,6 @@ a { color: var(--cyan); }
 :focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; border-radius: 6px; }
 .eyebrow { font: 500 12px var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
-.demo { background: var(--warn-bg); color: var(--warn-ink); font-size: 13px; text-align: center; padding: 8px 16px; margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
-.demo b { font-weight: 600; }
-
 .top { display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; padding-block: 18px; flex-wrap: wrap; }
 .brand { font-weight: 800; font-size: 21px; display: flex; align-items: center; gap: 10px; letter-spacing: -0.03em; }
 .brand svg { width: 28px; height: 28px; flex: none; }
@@ -187,8 +184,6 @@ tbody tr:hover .act { background: var(--cyan); color: var(--cyan-ink); }
 .cta-actions { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .cta-actions .btn { width: 100%; }
 .cta-note { font-size: 13px; color: #C6D3F5; text-align: center; max-width: 24ch; margin-inline: auto; }
-.risk { background: var(--warn-bg); color: var(--warn-ink); border-radius: 12px; padding: 18px 20px; font-size: 14px; }
-.risk b { font-weight: 600; }
 footer { padding-top: 24px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
 /* Footer */
@@ -420,10 +415,6 @@ footer.site-foot { display: block; border-top: 1px solid var(--line); padding-to
       </div>
     </section>
 
-    <section>
-      <div class="risk" id="risk" data-i18n="risk"></div>
-    </section>
-
     <footer class="site-foot">
       <div class="foot-grid">
         <div class="foot-brand">
@@ -485,7 +476,6 @@ var API = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=
 /* ---- Translations ---- */
 var T = {
 en: {
-  demo: "<b>Demo project.</b> Ledgerline Capital is a fictional company made for a course assignment. It holds no money and offers no real service.",
   nav_markets: "Markets", nav_plans: "Plans", nav_how: "How it works", nav_open: "Open account",
   pill_conn: "Connecting • 50+ Assets", pill_live: "Live Markets • 50+ Assets", pill_demo: "Demo Prices • 50+ Assets",
   h1: "We Trade &amp; Invest in <em>Bitcoin, ETH, USDT</em> &amp; More",
@@ -515,7 +505,6 @@ en: {
   cta_h2: "Start the conversation on Telegram",
   cta_p: "Open the bot, tell it your goal, and pick a plan. It will never ask for your recovery phrase or password.",
   copy_link: "Copy link", copied: "Copied", press_copy: "Press copy", open_bot: "Open the bot", contact_support: "Contact Support", cta_note: "Prefer a person? Message our support team.",
-  risk: "<b>Risk warning.</b> Trading and investing in crypto assets is high risk and you can lose all of your money. Prices shown are market data or, when the market feed is unavailable, simulated demo prices. This demo site is not financial advice and is not an offer to sell or buy anything.",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Built as a course assignment",
   trust1: "Bank-Grade Security", trust2: "Cold Storage", trust3: "24/7 Markets", trust4: "Instant Deposits",
   tc_h2: "Trade &amp; Invest in Top Cryptocurrencies",
@@ -544,7 +533,6 @@ en: {
   f_disc: "Cryptocurrency investments involve significant risk of loss. Past performance is not indicative of future results. This website is a demonstration template and does not offer real financial services."
 },
 es: {
-  demo: "<b>Proyecto de demostración.</b> Ledgerline Capital es una empresa ficticia creada para una tarea de curso. No guarda dinero ni ofrece ningún servicio real.",
   nav_markets: "Mercados", nav_plans: "Planes", nav_how: "Cómo funciona", nav_open: "Abrir cuenta",
   pill_conn: "Conectando • más de 50 activos", pill_live: "Mercados en vivo • más de 50 activos", pill_demo: "Precios de demostración • más de 50 activos",
   h1: "Operamos e invertimos en <em>Bitcoin, ETH, USDT</em> y más",
@@ -574,7 +562,6 @@ es: {
   cta_h2: "Inicia la conversación en Telegram",
   cta_p: "Abre el bot, cuéntale tu objetivo y elige un plan. Nunca te pedirá tu frase de recuperación ni tu contraseña.",
   copy_link: "Copiar enlace", copied: "Copiado", press_copy: "Pulsa copiar", open_bot: "Abrir el bot", contact_support: "Contactar con soporte", cta_note: "¿Prefieres hablar con una persona? Escribe a nuestro equipo de soporte.",
-  risk: "<b>Advertencia de riesgo.</b> Operar e invertir en criptoactivos es de alto riesgo y puedes perder todo tu dinero. Los precios mostrados son datos de mercado o, si el feed no está disponible, precios de demostración simulados. Este sitio de demostración no es asesoramiento financiero ni una oferta de compra o venta.",
   foot_l: "Ledgerline Capital (demo)", foot_r: "Creado como tarea de curso",
   trust1: "Seguridad de nivel bancario", trust2: "Almacenamiento en frío", trust3: "Mercados 24/7", trust4: "Depósitos instantáneos",
   tc_h2: "Opera e invierte en las principales criptomonedas",
@@ -603,7 +590,6 @@ es: {
   f_disc: "Las inversiones en criptomonedas implican un riesgo significativo de pérdida. El rendimiento pasado no es indicativo de resultados futuros. Este sitio web es una plantilla de demostración y no ofrece servicios financieros reales."
 },
 zh: {
-  demo: "<b>演示项目。</b>Ledgerline Capital 是为课程作业虚构的公司，不持有任何资金，也不提供真实服务。",
   nav_markets: "行情", nav_plans: "方案", nav_how: "运作方式", nav_open: "开设账户",
   pill_conn: "连接中 • 50+ 种资产", pill_live: "实时行情 • 50+ 种资产", pill_demo: "演示价格 • 50+ 种资产",
   h1: "交易并投资 <em>比特币、ETH、USDT</em> 等更多资产",
@@ -633,7 +619,6 @@ zh: {
   cta_h2: "在 Telegram 上开始对话",
   cta_p: "打开机器人，告诉它您的目标并选择方案。它绝不会索要您的助记词或密码。",
   copy_link: "复制链接", copied: "已复制", press_copy: "请按复制", open_bot: "打开机器人", contact_support: "联系客服", cta_note: "想与真人沟通？请联系我们的客服团队。",
-  risk: "<b>风险提示。</b>交易和投资加密资产风险很高，您可能损失全部资金。所示价格为市场数据；若行情源不可用，则为模拟的演示价格。本演示网站不构成财务建议，也不是任何买卖要约。",
   foot_l: "Ledgerline Capital（演示）", foot_r: "课程作业作品",
   trust1: "银行级安全", trust2: "冷存储", trust3: "24/7 全天候市场", trust4: "即时充值",
   tc_h2: "交易并投资主流加密货币",
